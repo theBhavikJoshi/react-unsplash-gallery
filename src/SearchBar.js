@@ -1,7 +1,7 @@
 import React from 'react';
 
 class SearchBar extends React.Component{
-  state = { searchTerm: 'flies' };
+  state = { searchTerm: '' };
 
   onInputChange = (event) => {
     this.setState({ searchTerm: event.target.value });
@@ -19,7 +19,7 @@ class SearchBar extends React.Component{
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
             <label>Search Text</label>
-            <input type="text" value={this.state.searchTerm} onChange={(e) => this.onInputChange(e)}/>
+            <input type="text" placeholder='Enter a term to search' value={this.state.searchTerm} onChange={(e) => this.onInputChange(e)}/>
           </div>
         </form>
       </div>
